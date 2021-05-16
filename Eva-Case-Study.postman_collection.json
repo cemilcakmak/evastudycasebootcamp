@@ -1,0 +1,542 @@
+{
+	"info": {
+		"_postman_id": "1d9a55ab-f856-4093-a310-7539b692c4af",
+		"name": "Eva-Case-Study",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Requests",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Get User",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9191/user/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9191/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Share",
+					"item": [
+						{
+							"name": "Get Share",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9191/share/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"share",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Shares",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9191/shares",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"shares"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Post Requests",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Create List",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"firstName\": \"Darth\",\r\n        \"lastName\": \"Vader\",\r\n        \"walletAmount\": 9000.00\r\n    },\r\n    {\r\n        \"firstName\": \"Obi-Wan\",\r\n        \"lastName\": \"Kenobi\",\r\n        \"walletAmount\": 8000.00\r\n    },\r\n    {\r\n        \"firstName\": \"Qui-Gon\",\r\n        \"lastName\": \"Jinn\",\r\n        \"walletAmount\": 7000.00\r\n    },\r\n    {\r\n        \"firstName\": \"Mace\",\r\n        \"lastName\": \"Windu\",\r\n        \"walletAmount\": 6000.00\r\n    },\r\n    {\r\n        \"firstName\": \"Darth\",\r\n        \"lastName\": \"Maul\",\r\n        \"walletAmount\": 5000.00\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9191/addUsers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"addUsers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Luke\",\r\n    \"lastName\": \"Skywalker\",\r\n    \"walletAmount\": 9999.00\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9191/addUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"addUser"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Share",
+					"item": [
+						{
+							"name": "Create Share",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"reference\":\"!USD\",\r\n    \"amount\": \"1000\",\r\n    \"rate\":1.20\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9191/addShare",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"addShare"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Shares",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"reference\": \"@TRY\",\r\n        \"amount\": \"2000\",\r\n        \"rate\": 0.20\r\n    },\r\n    {\r\n        \"reference\": \"&EUR\",\r\n        \"amount\": \"3000\",\r\n        \"rate\": 2.80\r\n    },\r\n    {\r\n        \"reference\": \"=ETH\",\r\n        \"amount\": \"4000\",\r\n        \"rate\": 0.96\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9191/addShares",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"addShares"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register Share",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9191/registerShare/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"registerShare",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Portfolio",
+					"item": [
+						{
+							"name": "Register Portfolio",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9191/registerPortfolio/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"registerPortfolio",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Trade",
+					"item": [
+						{
+							"name": "Buy Operations",
+							"item": [
+								{
+									"name": "Buy Valid",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9191/buy/1/&EUR/745",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9191",
+											"path": [
+												"buy",
+												"1",
+												"&EUR",
+												"745"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Buy Invalid (Unregistered Share)",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9191/buy/4/@TRY/500",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9191",
+											"path": [
+												"buy",
+												"4",
+												"@TRY",
+												"500"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Buy Invalid (Insufficient Fund)",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9191/buy/4/&EUR/3500",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9191",
+											"path": [
+												"buy",
+												"4",
+												"&EUR",
+												"3500"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Buy Invalid (Unregistered Portfolio)",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9191/buy/5/=ETH/700",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9191",
+											"path": [
+												"buy",
+												"5",
+												"=ETH",
+												"700"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Buy Invalid (Insufficient Share Amount)",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9191/buy/4/&EUR/50000",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9191",
+											"path": [
+												"buy",
+												"4",
+												"&EUR",
+												"50000"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Buy Invalid (Invalid Data)",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9191/buy/4/&TE2/50000",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9191",
+											"path": [
+												"buy",
+												"4",
+												"&TE2",
+												"50000"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Sell Operations",
+							"item": [
+								{
+									"name": "Sell Valid",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9191/sell/2/&EUR/350",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9191",
+											"path": [
+												"sell",
+												"2",
+												"&EUR",
+												"350"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Sell Invalid (Insufficent Amount)",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9191/sell/1/&EUR/600",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9191",
+											"path": [
+												"sell",
+												"1",
+												"&EUR",
+												"600"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Sell Invalid (InvalidData)",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "http://localhost:9191/sell/124/&EUR/600",
+											"protocol": "http",
+											"host": [
+												"localhost"
+											],
+											"port": "9191",
+											"path": [
+												"sell",
+												"124",
+												"&EUR",
+												"600"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Delete Requests",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Delete User",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9191/deleteUser/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"deleteUser",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Share",
+					"item": [
+						{
+							"name": "Delete Share",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9191/deleteShare/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9191",
+									"path": [
+										"deleteShare",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
